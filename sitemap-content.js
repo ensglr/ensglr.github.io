@@ -9,12 +9,11 @@
 // label.
 // ---------------------------------------------------
 // Author: Beautiful Beta
-// Url: http://beautifulbeta.blogspot.com
+// Url: 
 // Version: 2
 // Date: 2007-04-12
 // ---------------------------------------------------
 // Modified by Aneesh 
-// www.bloggerplugins.org
 // Date : 02-08-2011
 // global arrays
 
@@ -182,30 +181,30 @@ function displayToc(filter) {
 // this function creates a three-column table and adds it to the screen
 var numDisplayed = 0;
 var tocTable = '';
-var tocHead1 = 'POST TITLE';
-var tocTool1 = 'Click to sort by title';
-var tocHead2 = 'POST DATE';
-var tocTool2 = 'Click to sort by date';
-var tocHead3 = 'LABELS';
+var tocHead1 = 'MAKALE BAŞLIĞI';
+var tocTool1 = 'Başlığa göre sıralamak için tıklayın';
+var tocHead2 = 'MAKALE TARİHİ';
+var tocTool2 = 'Tarihe göre sıralamak için tıklayın';
+var tocHead3 = 'ETİKETLER';
 var tocTool3 = '';
 if (sortBy == "titleasc") { 
-   tocTool1 += ' (descending)';
-   tocTool2 += ' (newest first)';
+   tocTool1 += ' (azalan)';
+   tocTool2 += ' (önce yeniler)';
 }
 if (sortBy == "titledesc") { 
-   tocTool1 += ' (ascending)';
-   tocTool2 += ' (newest first)';
+   tocTool1 += ' (artan)';
+   tocTool2 += ' (önce yeniler)';
 }
 if (sortBy == "dateoldest") { 
-   tocTool1 += ' (ascending)';
-   tocTool2 += ' (newest first)';
+   tocTool1 += ' (artan)';
+   tocTool2 += ' (önce yeniler)';
 }
 if (sortBy == "datenewest") { 
-   tocTool1 += ' (ascending)';
-   tocTool2 += ' (oldest first)';
+   tocTool1 += ' (artan)';
+   tocTool2 += ' (önce eskiler)';
 }
 if (postFilter != '') {
-   tocTool3 = 'Click to show all posts';
+   tocTool3 = 'Tüm gönderileri göstermek için tıklayın';
 }
 tocTable += '<table>';
 tocTable += '<tr>';
@@ -233,7 +232,7 @@ for (var i = 0; i < postTitle.length; i++) {
 }
 tocTable += '</table>';
 if (numDisplayed == postTitle.length) {
-   var tocNote = '<span class="toc-note">Displaying all ' + postTitle.length + ' posts<br/></span>'; }
+   var tocNote = '<span class="toc-note">' + postTitle.length + ' gönderinin tümü gösteriliyor<br/></span>'; }
 else {
    var tocNote = '<span class="toc-note">Displaying ' + numDisplayed + ' posts labeled \'';
    tocNote += postFilter + '\' of '+ postTitle.length + ' posts total<br/></span>';
