@@ -92,7 +92,7 @@ function getPostData() {
          var pll = '';
          if ("category" in entry) {
             for (var k = 0; k < entry.category.length; k++) {
-               pll += '<a href="javascript:filterPosts(\'' + entry.category[k].term + '\');" title="Click here to select all posts with label \'' + entry.category[k].term + '\'">' + entry.category[k].term + '</a>,  ';
+               pll += '<a href="javascript:filterPosts(\'' + entry.category[k].term + '\');" title="\'' + entry.category[k].term + '\' etiketine sahip tüm gönderileri görmek için tıklayın.">' + entry.category[k].term + '</a>,  ';
             }
          var l = pll.lastIndexOf(',');
          if (l != -1) { pll = pll.substring(0,l); }
