@@ -1,2 +1,2 @@
-# framebilisim.github.io
+# iyilist.github.io
 kişisel
