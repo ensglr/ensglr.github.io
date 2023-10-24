@@ -1,2 +1,2 @@
-# iyilist.github.io
+
 kişisel
