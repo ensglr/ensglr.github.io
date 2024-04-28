@@ -7,62 +7,12 @@
 			background: #eee;
 		}
 
-		#content {
-			width: 50%;
-			background: #fff;
-			padding: 20px;
-			font-family: Sans-Serif;
-			font-size: 18px;
-			color: #444;
-			margin: 0 auto;
-
-			max-height: 100px;
-			overflow: hidden;
-		}
-
-		#content.open {
-			max-height: 1000px;
-		}
-
-		#show-more {
-			width: 20%;
-			background: #1594e5;
-			color: #fff;
-			font-family: sans-serif;
-			display: block;
-			cursor: pointer;
-			text-align: center;
-			padding: 15px;
-			margin: 10px auto;
-		}
 	</style>
 </head>
 <body>
 
-	<div id="content">Lorem ipsum dolor sit amet, ante dignissim, varius elit urna erat odio lectus. Aenean laoreet pellentesque justo maecenas nec, viverra diam cras, lorem at vitae vestibulum, arcu lobortis ac. Netus vitae wisi odio vitae sagittis tortor, cras mauris accumsan sed ornare phasellus pellentesque, tellus morbi non in lectus vel volutpat, arcu eu a, et at urna donec integer suscipit orci. Elit nisl hendrerit mus dui. Commodo eget odio, in nulla eget, curabitur enim sed semper. At malesuada pharetra felis commodo facilisi egestas, in praesent in neque lorem libero nostrud, turpis ac, blandit fringilla vestibulum odio nullam, sit etiam ut. Lectus integer facilisis in fusce erat amet. 
-		</div>
-
-	<a id="show-more">SHOW MORE</a>
 	<a href="example/card.html">card</a>
 	<a href="example/value.html">value</a>
-	<script>
-		var content = document.getElementById("content");
-		var button = document.getElementById("show-more");
-
-		button.onclick = function () {
-
-			if(content.className == "open"){
-		//shrink the box
-		content.className = "";
-		button.innerHTML = "SHOW MORE";
-	} else {
-		//expand the box
-		content.className = "open";
-		button.innerHTML = "SHOW LESS";
-	}
-
-};
-</script>
 
 </body>
 </html>
