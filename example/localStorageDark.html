@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css");
+
+/*Buton Kapsayicisi Stili.*/
+.sec {
+    cursor: pointer;
+}
+/*Simdi ise iconlari ekleyelim.*/
+.sec.karanlik-mod::before {
+    content: '\F494';
+    font-family: 'bootstrap-icons';
+}
+.sec.normal-mod:before {
+    content: '\F5A2';
+    font-family: 'bootstrap-icons';
+}
+/*Dark Stili Verelim*/
+.darkmode {
+    color: #fff;
+    background-color: black;
+}
+
+</style>
+</head>
+<body>
+
+  <!--Simdi ise Karanlik Modu Aktif/Pasif Hale Getirecek Bir <SPAN> -->
+    <span id="dark-mode-toggle" class="sec karanlik-mod"></span>
+
+<script>
+//Js Kodlarini Girelim.
+
+let darkMode = localStorage.getItem("darkMode");
+
+function enableDarkMode () {
+    document.body.classList.add("darkmode");
+    localStorage.setItem("darkMode", "enabled");
+}
+function disableDarkMode() {
+    document.body.classList.remove("darkmode");
+    localStorage.setItem("darkMode", null)
+}
+
+if (darkMode === "enabled") {
+    enableDarkMode();
+}
+
+//icon degisimi
+document.getElementById("dark-mode-toggle").addEventListener("click", function (e)
+{
+    var target = e.target;
+
+    target.classList.toggle("karanlik-mod");
+    target.classList.toggle("normal-mod");
+}, false);
+
+const darkModeToggle = document.querySelector("#dark-mode-toggle");
+darkModeToggle.addEventListener("click", () => {
+
+    darkMode = localStorage.getItem("darkMode");
+    darkMode !== "enabled" ? enableDarkMode () : disableDarkMode ();
+});
+</script>
+
+</body>
+</html>
+
