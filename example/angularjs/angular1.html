@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.7.8/angular.min.js"></script>
+</head>
+<body ng-app="">
+
+    {{5+20}} <br>
+    <input type="text" ng-model="kutu"><br>
+    {{kutu}} <br>
+    Toplam soru: {{(dogru+yanlis)}} <br>
+    doğru sayısı: <br>
+    <input type="number" ng-model="dogru"> <br>
+    yanlış sayısı: <br>
+    <input type="number" ng-model="yanlis"> <br>
+    Net: {{dogru-(yanlis/4)}} <br><small>*4 yanlış 1 doğruyu götürüyor.</small> <br>
+
+    <div ng-init="deger='ilk değer'">
+        <p ng-bind="deger"></p>
+        <input type="text" ng-value="deger">
+    </div>
+    
+</body>
+</html>
